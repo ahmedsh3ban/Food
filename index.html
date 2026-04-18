@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Food</title>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css"> 
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic&family=Anton&family=Bokor&family=Cairo:slnt,wght@11,1000&family=Changa:wght@200..800&family=DM+Serif+Display:ital@0;1&family=Edu+AU+VIC+WA+NT+Pre&family=Geist+Mono:wght@100..900&family=Geo:ital@0;1&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reem+Kufi:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic&family=Anton&family=Bokor&family=Cairo:slnt,wght@11,1000&family=Changa:wght@200..800&family=DM+Serif+Display:ital@0;1&family=Edu+AU+VIC+WA+NT+Pre&family=Geist+Mono:wght@100..900&family=Geo:ital@0;1&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Playwrite+HU:wght@100..400&family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reem+Kufi:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Antic&family=Anton&family=Bokor&family=Cairo:slnt,wght@11,1000&family=Changa:wght@200..800&family=DM+Serif+Display:ital@0;1&family=Edu+AU+VIC+WA+NT+Pre&family=Geist+Mono:wght@100..900&family=Geo:ital@0;1&family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Parkinsans:wght@300..800&family=Playwrite+VN:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Reem+Kufi:wght@400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#home"></a>
+            <i class="fa-solid fa-utensils"></i>
+            <h4>food</h4>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="asideBarTow()">home</a></li>
+                <li><a href="#about" onclick="asideBarTow()">about</a></li>
+                <li><a href="#popular" onclick="asideBarTow()">popular</a></li>
+                <li><a href="#menu" onclick="asideBar()" class = "menu">menu</a></li>
+                <li><a href="#order" onclick="asideBarTow()">order</a></li>
+                <li><a href="#blogs" onclick="asideBarTow()">blogs</a></li>
+            </ul>
+        </nav>
+        
+        <div class="scial-icons">
+            <a href="https://www.facebook.com/ahmed.yousefa.3/"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/2hmed_shaban_/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="list">
+            <div class="listOpen" onclick="listdrobNavOpen(),asideBarTow()">
+                <i class="fa-solid fa-bars" class = "open"></i>
+            </div>
+            <div class="listClose"  onclick="listdrobNavClose(),asideBarTow()">
+                <i class="fa-solid fa-xmark" class = "close"></i>
+            </div>
+        </div>
+        <div class="drobNav">
+            <ul>
+                <li><a href="#home" onclick="asideBarTow(),listdrobNavClose()">home</a></li>
+                <li><a href="#about" onclick="asideBarTow(),listdrobNavClose()">about</a></li>
+                <li><a href="#popular" onclick="asideBarTow(),listdrobNavClose()">popular</a></li>
+                <li><a href="#menu" onclick="asideBar(),listdrobNavClose()" class = "menu">menu</a></li>
+                <li><a href="#order" onclick="asideBarTow(),listdrobNavClose()">order</a></li>
+                <li><a href="#blogs" onclick="asideBarTow(),listdrobNavClose()">blogs</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- home section -->
+    <section class="home" id = "home">
+        <div class="container">
+            <div class="content">
+                <h3>welcome foodies</h3>
+                <h1>different spices for the different tastes 😋</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis unde dolores temporibus hic quam debitis tenetur harum nemo.</p>
+                
+                <button class = "orderNow">
+                    <a href="#popular" class="btn" onclick="car()"></a>
+                    <a href="#" >order now</a>
+                </button>
+                <div class="car"><i class="fa-solid fa-car-side"></i></div>
+            </div>
+            <div class="image">
+                <img loading="lazy" src="images/home-parallax-img4.png"alt="" class = "parallax" id = "dishs">
+                <img loading="lazy" src="images/home-img1.png"alt="home image" class = "home-image">
+            </div>
+        </div>
+        <span class = "drop-btn" onclick = "asideBar(),listdrobNavClose()"><i class="fa-solid fa-angles-left"></i></span>
+        <aside class = "home-aside">
+            <span class = "drop-btn-two" onclick = "asideBarTow()"><i class="fa-solid fa-xmark"></i></span>
+            <h1>our menu</h1>
+            <h3>our top dishes</h3>
+            <div class="container">
+                <div class="box">
+                    <img loading="lazy" src="images/menu-1.png" alt="">
+                    <a href="#" class = "menu-shown"></a>
+                    <div class="title">
+                        <h2>Delicious Food</h2>
+                        <span>$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img loading="lazy" src="images/menu-2.png" alt="">
+                    <a href="#" class = "menu-shown"></a>
+                    <div class="title">
+                        <h2>Delicious Food</h2>
+                        <span>$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img loading="lazy" src="images/menu-3.png" alt="">
+                    <a href="#" class = "menu-shown"></a>
+                    <div class="title">
+                        <h2>Delicious Food</h2>
+                        <span>$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img loading="lazy" src="images/menu-4.png" alt="" >
+                    <a href="#" class = "menu-shown"></a>
+                    <div class="title">
+                        <h2>Delicious Food</h2>
+                        <span>$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img loading="lazy" src="images/menu-5.png" alt="" style="width: 60%;">
+                    <a href="#" class = "menu-shown"></a>
+                    <div class="title">
+                        <h2>Delicious Food</h2>
+                        <span>$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img loading="lazy" src="images/menu-6.png" alt="">
+                    <a href="#" class = "menu-shown"></a>
+                    <div class="title">
+                        <h2>Delicious Food</h2>
+                        <span>$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img loading="lazy" src="images/menu-1.png" alt="">
+                    <a href="#" class = "menu-shown"></a>
+                    <div class="title">
+                        <h2>Delicious Food</h2>
+                        <span>$40.00</span>
+                    </div>
+                </div>
+                <div class="box">
+                    <img loading="lazy" src="images/menu-2.png" alt="">
+                    <a href="#" class = "menu-shown"></a>
+                    <div class="title">
+                        <h2>Delicious Food</h2>
+                        <span>$40.00</span>
+                    </div>
+                </div>
+            </div>
+            <h1>cart</h1>
+            <hr>
+        </aside>
+    </section>
+    
+    <!-- about section -->
+    <section class="about" id = "about" >
+        <div class="container">
+            <div class="image">
+                <img loading="lazy" src="images/about-img.png"alt="">
+            </div>
+            <div class="content">
+                <div class="abouting">
+                    <h3>why choose us?</h3>
+                    <h1>what's make our food delicious!</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis unde dolores temporibus hic quam debitis tenetur harum nemo.</p>
+                    
+                    <button class = "orderNow">
+                        <a href="#home" class="btn"></a>
+                        <a href="#" >read more</a>
+                    </button>
+                </div>
+                <div class="cards">
+                    <div class="box">
+                        <img loading="lazy" src="images/serv-1.png" alt="">
+                        <h3>fast delivery</h3>
+                    </div>
+                    <div class="box">
+                        <img loading="lazy" src="images/serv-2.png" alt="">
+                        <h3>fresh food</h3>
+                    </div>
+                    <div class="box">
+                        <img loading="lazy" src="images/serv-3.png" alt="">
+                        <h3>best quality</h3>
+                    </div>
+                    <div class="box">
+                        <img loading="lazy" src="images/serv-4.png" alt="">
+                        <h3>support</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- popular section -->
+    <section class="popular" id="popular">
+        <div class="title">
+            <h3>popular food</h3>
+            <h1>our special dishes</h1>
+        </div>
+        <div class="container">
+            <div class="box" id = "boxCart">
+                <div class="heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <img loading="lazy" src="images/food-1.png" alt="">
+                <h3>delicious food</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 50 )</span>
+                </div>
+                <div class="price">
+                    $40.00
+                    <del>$50.00</del>
+                </div>
+                <button class = "addCart">
+                    <a href="#popular" class = "btnOne" onclick = "productComplate()"></a>
+                    <a href="#" class = "btn">add to cart</a>
+                </button>
+            </div>
+            <div class="box" id = "boxCart">
+                <div class="heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <img loading="lazy" src="images/food-2.png" alt="">
+                <h3>delicious food</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 50 )</span>
+                </div>
+                <div class="price">
+                    $40.00
+                    <del>$50.00</del>
+                </div>
+                <button class = "addCart">
+                    <a href="#popular" class = "btnOne" onclick = "productComplate()"></a>
+                    <a href="#" class = "btn">add to cart</a>
+                </button>
+            </div>
+            <div class="box" id = "boxCart">
+                <div class="heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <img loading="lazy" src="images/food-3.png" alt="">
+                <h3>delicious food</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 50 )</span>
+                </div>
+                <div class="price">
+                    $40.00
+                    <del>$50.00</del>
+                </div>
+                <button class = "addCart">
+                    <a href="#popular" class = "btnOne" onclick = "productComplate()"></a>
+                    <a href="#" class = "btn">add to cart</a>
+                </button>
+            </div>
+            <div class="box" id = "boxCart">
+                <div class="heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <img loading="lazy" src="images/food-4.png" alt="">
+                <h3>delicious food</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 50 )</span>
+                </div>
+                <div class="price">
+                    $40.00
+                    <del>$50.00</del>
+                </div>
+                <button class = "addCart">
+                    <a href="#popular" class = "btnOne" onclick = "productComplate()"></a>
+                    <a href="#" class = "btn">add to cart</a>
+                </button>
+            </div>
+            <div class="box" id = "boxCart">
+                <div class="heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <img loading="lazy" src="images/food-5.png" alt="">
+                <h3>delicious food</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 50 )</span>
+                </div>
+                <div class="price">
+                    $40.00
+                    <del>$50.00</del>
+                </div>
+                <button class = "addCart">
+                    <a href="#popular" class = "btnOne" onclick = "productComplate()"></a>
+                    <a href="#" class = "btn">add to cart</a>
+                </button>
+            </div>
+            <div class="box" id = "boxCart">
+                <div class="heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <img loading="lazy" src="images/food-6.png" alt="">
+                <h3>delicious food</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 50 )</span>
+                </div>
+                <div class="price">
+                    $40.00
+                    <del>$50.00</del>
+                </div>
+                <button class = "addCart">
+                    <a href="#popular" class = "btnOne" onclick = "productComplate()"></a>
+                    <a href="#" class = "btn">add to cart</a>
+                </button>
+            </div>
+            <div class="box" id = "boxCart">
+                <div class="heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <img loading="lazy" src="images/food-7.png" alt="">
+                <h3>delicious food</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 50 )</span>
+                </div>
+                <div class="price">
+                    $40.00
+                    <del>$50.00</del>
+                </div>
+                <button class = "addCart">
+                    <a href="#popular" class = "btnOne" onclick = "productComplate()"></a>
+                    <a href="#" class = "btn">add to cart</a>
+                </button>
+            </div>
+            <div class="box" id = "boxCart">
+                <div class="heart">
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+                <img loading="lazy" src="images/food-1.png" alt="">
+                <h3>delicious food</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <span>( 50 )</span>
+                </div>
+                <div class="price">
+                    $40.00
+                    <del>$50.00</del>
+                </div>
+                <button class = "addCart">
+                    <a href="#popular" class = "btnOne" onclick = "productComplate()"></a>
+                    <a href="#" class = "btn">add to cart</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!--blog section  -->
+    <section class = "blogs" id = "blogs">
+        <div class="title">
+            <h3>pour blogs</h3>
+            <h1>our daily stories</h1>
+        </div>
+        <div class="container">
+            <div class="box" id = "boxCart">
+                <div class="image">
+                    <a href="" class = "btnZoom"></a>
+                    <img loading="lazy" src="images/blog-1.jpg" alt="">
+                </div>
+                <div class="linkes">
+                    <a href="">
+                        <i class = "fas fa-tag"></i>
+                        <p>food</p>
+                    </a>
+                    <a href="">
+                        <i class = "fas fa-tag"></i>
+                        <p>burger</p>
+                    </a>
+                    <a href="">
+                        <i class = "fas fa-tag"></i>
+                        <p>pizza</p>
+                    </a>
+                </div>
+                <h3>blog title goes here...</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, earum</p>
+                <button class = "addCart">
+                    <a href="" class = "btnOne"></a>
+                    <a href="#" class = "btn">read more</a>
+            
+                </button>
+            </div>
+            <div class="box" id = "boxCart">
+                <div class="image">
+                    <a href="" class = "btnZoom"></a>
+                    <img loading="lazy" src="images/blog-2.jpg" alt="">
+                </div>
+                <div class="linkes">
+                    <a href="">
+                        <i class = "fas fa-tag"></i>
+                        <p>food</p>
+                    </a>
+                    <a href="">
+                        <i class = "fas fa-tag"></i>
+                        <p>burger</p>
+                    </a>
+                    <a href="">
+                        <i class = "fas fa-tag"></i>
+                        <p>pizza</p>
+                    </a>
+                </div>
+                <h3>blog title goes here...</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, earum</p>
+                <button class = "addCart">
+                    <a href="" class = "btnOne"></a>
+                    <a href="#" class = "btn">read more</a>
+                </button>
+            </div>
+            <div class="box" id = "boxCart">
+                <div class="image">
+                    <a href="" class = "btnZoom"></a>
+                    <img loading="lazy" src="images/blog-3.jpg" alt="">
+                </div>
+                <div class="linkes">
+                    <a href="">
+                        <i class = "fas fa-tag"></i>
+                        <p>food</p>
+                    </a>
+                    <a href="">
+                        <i class = "fas fa-tag"></i>
+                        <p>burger</p>
+                    </a>
+                    <a href="">
+                        <i class = "fas fa-tag"></i>
+                        <p>pizza</p>
+                    </a>
+                </div>
+                <h3>blog title goes here...</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem, earum</p>
+                <button class = "addCart">
+                    <a href="" class = "btnOne"></a>
+                    <a href="#" class = "btn">read more</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- order section -->
+    <section class="order" id="order">
+        <div class="title">
+            <h3>order now</h3>
+            <h1>fastest home delivery</h1>
+        </div>
+        <div class="container">
+            <div class="box" id = "boxCart">
+                <img src="images/icon-1.png" alt="">
+                <h3>7:00am to 10:30pm</h3>
+            </div>
+            <div class="box" id = "boxCart">
+                <img src="images/icon-2.png" alt="">
+                <h3>+123-456-7890</h3>
+            </div>
+            <div class="box" id = "boxCart">
+                <img src="images/icon-3.png" alt="">
+                <h3>Egypt , Beni Suef</h3>
+            </div>
+        </div>
+        <form action="" method="post">
+            <div class="container">
+                <div class="leftForm">
+                    <label for="">Your name</label>
+                    <input type="text" required  name = "name" placeholder="">
+
+                    <label for="">Your order</label>
+                    <input type="text" required  name = "order">
+
+                    <label for="">Your details</label>
+                    <input type="text" required  name = "details">
+
+                    <textarea name="address" id="address" placeholder="your address"></textarea>
+                </div>
+                <div class="rightForm">
+                    <label for="">your number</label>
+                    <input type="text" required name = "number" maxlength = "11">
+
+                    <label for="">how much</label>
+                    <input type="number" required  name = "quantity" minlength="0">
+
+                    <label for="">pick up time</label>
+                    <input type="number" required  name = "details">
+
+                    <iframe
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=31.09615802764893%2C29.074189007455193%2C31.097981929779056%2C29.076083125571866&amp;layer=cyclosm">
+                    </iframe>
+                    <a href="https://www.openstreetmap.org/?#map=20/29.1371861/31.0109912&amp;layers=YN">View Larger Map</a>
+                </div>
+            </div>
+            <button type="submit">procced to order</button>
+        </form>
+    </section>
+
+    <!-- footer section -->
+    <footer>
+        <div class="container">
+            <div class="box">
+                <h2>our menu</h2>
+                <nav>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" class = "btnMove"></a>
+                        <a href="#">pizza</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" class = "btnMove"></a>
+                        <a href="#">burger</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" class = "btnMove"></a>
+                        <a href="#">chicken</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" class = "btnMove"></a>
+                        <a href="#">pasta</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" class = "btnMove"></a>
+                        <a href="#">and more...</a>
+                    </span>
+                </nav>
+            </div>
+            <div class="box">
+                <h2>quick links</h2>
+                <nav>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="#home" class = "btnMove"></a>
+                        <a href="#">home</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="#about" class = "btnMove"></a>
+                        <a href="#">about</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="#popular" class = "btnMove"></a>
+                        <a href="#">popular</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="#" class = "btnMove" onclick="asideBar()"></a>
+                        <a href="">menu</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="#order" class = "btnMove"></a>
+                        <a href="#">order</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="#blogs" class = "btnMove"></a>
+                        <a href="#">blogs</a>
+                    </span>
+                </nav>
+            </div>
+            <div class="box">
+                <h2>extra links</h2>
+                <nav>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" class = "btnMove"></a>
+                        <a href="#">my orders</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" class = "btnMove"></a>
+                        <a href="#">my account</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" class = "btnMove"></a>
+                        <a href="#">mt favorite</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" class = "btnMove"></a>
+                        <a href="#">terms of use</a>
+                    </span>
+                    <span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                        <a href="" class = "btnMove"></a>
+                        <a href="#">privacy plicy</a>
+                    </span>
+                </nav>
+            </div>
+            <div class="box">
+                <h2>opening hours</h2>
+                <nav>
+                    <span>
+                        <p>monday : 7:00am to 10:00pm</p>
+                    </span>
+                    <span>
+                        <p>tuesday : 7:00am to 10:00pm</p>
+                    </span>
+                    <span>
+                        <p>wednesday : 7:00am to 10:00pm</p>
+                    </span>
+                    <span>
+                        <p>friday : 7:00am to 10:00pm</p>
+                    </span>
+                    <span>
+                        <p>saturday and sunday closed</p>
+                    </span>
+                </nav>
+            </div>
+        </div>
+
+        <div class="copyRight">
+            <p>&copy; <span id="year"></span> Food. All Rights Reserved.|made by <a href="https://www.facebook.com/ahmed.yousefa.3/" target="_blank">Ahmed Shaban</a></p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+</html>
